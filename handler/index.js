@@ -30,11 +30,7 @@ module.exports = async (client) => {
     });
 
     client.on("ready", async () => {
-        const guild = client.guilds.cache.get("GUILD ID");
-
-        await guild.commands.set([]);
-
-        await client.application.commands.set([]);
+        const guild = client.guilds.cache.get("ID");
 
         await guild.commands.set(arrayOfSlashCommands).then((cmd) => {
             const getRoles = (commandName) => {
@@ -70,13 +66,13 @@ module.exports = async (client) => {
         });
     });
 
-    // const database = createConnection({
-    //     host: 'localhost',
-    //     user: 'user',
-    //     password: 'password',
-    //     database: 'db',
-    // });
-    //
-    // database.connect();
+    const database = createConnection({
+        host: 'localhost',
+        user: 'user',
+        password: 'password',
+        database: 'db',
+    });
+
+    database.connect();
 
 };

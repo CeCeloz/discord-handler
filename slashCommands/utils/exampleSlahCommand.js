@@ -1,14 +1,14 @@
 const {Client, CommandInteraction} = require('discord.js')
 
 module.exports = {
-    name: 'exampleCommand',
+    name: 'example',
     description: 'this is a example command',
-    userPermissions: ["USE_APPLICATION_COMMANDS"],
+    userPermissions: ["ADMINISTRATOR"],
     /**
      * @param {Client} client
      * @param {CommandInteraction} interaction
      */
     run: async (client, interaction) => {
-        interaction.reply('hi, this a example command')
+        await interaction.followUp('hi, this a example command')
     },
 }
