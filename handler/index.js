@@ -70,13 +70,13 @@ module.exports = async (client) => {
         });
     });
 
-    const database = createConnection({
-        host: 'localhost',
-        user: 'user',
-        password: 'password',
-        database: 'db',
-    });
-
-    database.connect();
+    // const database = createConnection({
+    //     host: 'localhost',
+    //     user: 'user',
+    //     password: 'password',
+    //     database: 'db',
+    // });
+    //
+    // database.connect();
 
 };
