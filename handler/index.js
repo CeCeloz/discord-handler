@@ -1,7 +1,6 @@
 const {glob} = require("glob");
 const {promisify} = require("util");
 const {Client} = require("discord.js");
-const {createConnection} = require('mysql');
 const globPromise = promisify(glob);
 
 /**
@@ -66,13 +65,5 @@ module.exports = async (client) => {
         });
     });
 
-    const database = createConnection({
-        host: 'localhost',
-        user: 'user',
-        password: 'password',
-        database: 'db',
-    });
-
-    database.connect();
 
 };
