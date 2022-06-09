@@ -8,7 +8,7 @@ client.on("interactionCreate", async (interaction) => {
 
         const cmd = client.slashCommands.get(interaction.commandName);
         if (!cmd)
-            return interaction.deferReply({content: "Unknown command. ", ephemeral: true});
+            return interaction.followUp({content: "Este comando não existe. ", ephemeral: true});
 
         const args = [];
 
@@ -21,6 +21,10 @@ client.on("interactionCreate", async (interaction) => {
             } else if (option.value) args.push(option.value);
         }
         interaction.member = interaction.guild.members.cache.get(interaction.user.id);
+
+        if (!interaction.member.permissions.has(cmd.permissions)) {
+            return interaction.reply({content: "You don't have permission to run this command.", ephemeral: true});
+        }
 
         cmd.run(client, interaction);
     }
