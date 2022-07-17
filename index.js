@@ -1,15 +1,23 @@
-const {Client, Collection} = require("discord.js")
+const { Client, Collection } = require('discord.js');
+const fs = require('fs')
 
-// 32767 is all discord intents
-const client = new Client({intents: 32767})
-module.exports = client
+const client = new Client({
+    intents: 32767
+});
+client.setMaxListeners(0);
 
-//Variables
-client.commands = new Collection();
-client.slashCommands = new Collection();
+client.slashCommands = new Collection() ;
+
+module.exports = client;
 client.config = require("./config.json");
 
-// Loading
-require("./handler")(client);
+["events", "slashCommands"].forEach(handler => {
+    require(`./structures/${handler}`)(client);
+});
+
+process.on('unhandledRejection', err => {
+    console.log(`[ERROR] Unhandled promise rejection: ${err.message}.`);
+    console.log(err);
+});
 
 client.login(client.config.token);
