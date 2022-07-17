@@ -1,5 +1,4 @@
-const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, SelectMenuBuilder } = require("@discordjs/builders")
-const { ApplicationCommandOptionType, ButtonStyle } = require("discord.js")
+const { ApplicationCommandOptionType} = require("discord.js")
 
 module.exports = {
     name: 'ping',
