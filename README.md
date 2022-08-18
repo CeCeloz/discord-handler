@@ -32,8 +32,4 @@ Start the server
 node index.js
 or
 node .
-```
-
-this handler is based on reconlx
-/
-djs-base-handler
+``
