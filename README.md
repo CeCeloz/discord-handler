@@ -1,5 +1,4 @@
-Handler for discord.js v14
-
+# Handler for discord.js v14
 
 ## Installation
 
