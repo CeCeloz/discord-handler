@@ -1,14 +1,4 @@
-<div align="center">
-  <br />
-  <p>
-    <a href="https://github.com/CeCeloz/discord-handler"><img src="https://i.imgur.com/V6ACYxb.png" width="546" alt="discord.js" /></a>
-  </p>
-  <br />
-</div>
-
-# Discord.js Handler
-
-Handler made for slash commands and events in v13 of discord.js
+Handler for discord.js v14
 
 
 ## Installation
@@ -29,7 +19,7 @@ Click on template and download this source code and follow the steps of #install
  
 Start the server
 ```sh
-node index.js
-or
 node .
+or
+npm run dev
 ``
