@@ -1,8 +1,8 @@
 {
   "name": "discord-handler",
   "version": "1.0.0",
-  "description": "handler for discord.js",
-  "main": "index.js",
+  "description": "simple handler",
+  "main": "src/index.js",
   "scripts": {
     "dev": "nodemon ."
   },
