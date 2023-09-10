@@ -18,11 +18,8 @@
   "homepage": "https://github.com/CeCeloz/discord-handler#readme",
   "dependencies": {
     "@discordjs/rest": "^2.0.1",
-    "chalk": "^5.0.1",
-    "discord-api-types": "^0.37.2",
-    "discord-html-transcripts": "^3.1.4",
-    "discord.js": "^14.1.2",
-    "dotenv": "^16.0.1",
+    "discord-api-types": "^0.37.56",
+    "discord.js": "^14.13.0",
     "nodemon": "^3.0.1"
   }
 }
